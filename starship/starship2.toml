@@ -1,0 +1,55 @@
+"$schema" = "https://starship.rs/config-schema.json"
+
+add_newline = true
+
+format = """
+[╭─](#7c3aed)\
+$username\
+$directory\
+$git_branch\
+$git_status\
+$cmd_duration\
+$time
+[╰─](#7c3aed)\
+$character
+"""
+
+# ───────── USER ─────────
+[username]
+show_always = true
+format = "[fenvoid](#7c3aed) "
+
+# ───────── DIRECTORY ─────────
+[directory]
+style = "cyan"
+truncation_length = 3
+truncation_symbol = "…/"
+format = "[  $path](cyan) "
+
+# ───────── GIT (DYNAMIC FEEL) ─────────
+[git_branch]
+symbol = " "
+style = "magenta"
+format = "[ $symbol$branch ](magenta)"
+
+[git_status]
+style = "magenta"
+format = "[ $all_status$ahead_behind ](magenta)"
+
+# ───────── COMMAND DURATION ─────────
+[cmd_duration]
+min_time = 1500
+style = "yellow"
+format = "[ ⏱ $duration ](yellow)"
+
+# ───────── TIME (MOVING FEEL) ─────────
+[time]
+disabled = false
+time_format = "%H:%M:%S"
+style = "cyan"
+format = "[  $time ](cyan)"
+
+# ───────── PROMPT ARROW (STATE CHANGE = ANIMATION FEEL) ─────────
+[character]
+success_symbol = "[❯❯](bold cyan)"
+error_symbol = "[❯❯](bold red)"

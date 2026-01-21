@@ -1,0 +1,84 @@
+"$schema" = "https://starship.rs/config-schema.json"
+
+format = """
+[╭─](#a78bfa)\
+$os\
+$username\
+$directory\
+$git_branch\
+$git_status\
+$status\
+$battery\
+$cmd_duration\
+$time
+[╰─](#a78bfa)\
+$character
+"""
+
+add_newline = true
+
+# ───────── OS ICON (Aesthetic Bold) ─────────
+[os]
+disabled = false
+style = "bold #a78bfa"
+symbols = { Garuda = "󱗗 ", Arch = "󰣇 " }
+
+# ───────── USER ─────────
+[username]
+show_always = true
+format = "[$user](#a78bfa) "
+
+# ───────── DIRECTORY (Light Cyan) ─────────
+[directory]
+style = "cyan"
+truncation_length = 3
+format = "[ $path](cyan) "
+
+# ───────── GIT (Neon Pink/Magenta) ─────────
+[git_branch]
+symbol = " "
+style = "magenta"
+format = "[ $symbol$branch ](magenta)"
+
+[git_status]
+style = "magenta"
+format = "([$all_status$ahead_behind]($style))"
+
+# ───────── STATUS (Error Indicator) ─────────
+# [status]
+# disabled = false
+# format = '[\[✘ $int\]]($style) '
+# style = "bold red"
+# pipestatus = true
+
+# ───────── BATTERY (Hamesha dikhne wala) ─────────
+[battery]
+full_symbol = "󰁹 "
+charging_symbol = "󰂄 "
+discharging_symbol = "󰂃 "
+format = "[$symbol$percentage]($style) "
+
+# Ye part zaroori hai: Isse charging ke waqt bhi dikhega
+disabled = false
+
+[[battery.display]]
+threshold = 101 # 101 karne se ye hamesha dikhega, chahe full ho ya charging
+style = "bold green" # Charging/Full ke waqt green dikhega
+
+# ───────── COMMAND DURATION ─────────
+[cmd_duration]
+min_time = 1500
+style = "yellow"
+format = "[ ⏱ $duration ](yellow)"
+
+# ───────── TIME ─────────
+[time]
+disabled = false
+time_format = "%H:%M"
+style = "dimmed cyan"
+format = "[  $time ](cyan)"
+
+# ───────── CHARACTER (Arrow Style) ─────────
+[character]
+success_symbol = "[❯❯](bold cyan)"
+error_symbol = "[❯❯](bold red)"
