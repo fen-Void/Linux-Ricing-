@@ -1,0 +1,81 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+   "logo": {
+    "source": "~/cigrate.txt",
+    "color": {
+        "1": "red",
+        "2": "white"
+    },
+    "padding": {
+        "top": 2,
+        "right": 4
+    }
+},
+    "display": {
+        "separator": " ➜  ",
+        "bar": {
+            "char": {
+                "elapsed": "■",
+                "remaining": " "
+            },
+            "width": 12
+        }
+    },
+    "modules": [
+        "break",
+        {
+            "type": "title",
+            "keyWidth": 10
+        },
+        "break",
+        {
+            "type": "os",
+            "key": "󰣇 OS",
+            "keyColor": "blue"
+        },
+        {
+            "type": "kernel",
+            "key": "󰒋 KO",
+            "keyColor": "magenta"
+        },
+        {
+            "type": "packages",
+            "key": "󰏖 PK",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "shell",
+            "key": "󱆃 SH",
+            "keyColor": "cyan"
+        },
+        "break",
+        {
+            "type": "cpu",
+            "key": "󰻠 CP",
+            "keyColor": "green",
+            "temp": true
+        },
+        {
+            "type": "gpu",
+            "key": "󰢮 GP",
+            "keyColor": "magenta",
+            "temp": true
+        },
+        {
+            "type": "memory",
+            "key": "󰍛 RM",
+            "keyColor": "blue"
+        },
+        //{
+          //  "type": "swap",
+          //  "key": "󰓡 SW",
+          //  "keyColor": "magenta"
+       // },
+        "break",
+        {
+            "type": "colors",
+            "symbol": "circle"
+        },
+        "break"
+    ]
+}
