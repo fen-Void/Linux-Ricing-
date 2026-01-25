@@ -1,0 +1,105 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "type": "builtin",
+        "source": "garuda_dragon",          // Garuda का official dragon logo (small version अच्छा लगता है)
+        "padding": {
+            "top": 1,
+            "right": 2
+        }
+    },
+
+    "display": {
+        "separator": "    ",               // cool separator (Nerd Font चाहिए)
+        "color": "cyan",                     // Garuda का cyan/blue theme match
+        "brightColor": "light_cyan"
+    },
+
+    "modules": [
+        "title",
+        {
+            "type": "os",
+            "key": "   OS",
+            "format": "{pretty-name} {arch}"
+        },
+        {
+            "type": "kernel",
+            "key": "   Kernel"
+        },
+        {
+            "type": "uptime",
+            "key": "  󰅐 Uptime"
+        },
+        {
+            "type": "packages",
+            "key": "   Packages"
+        },
+        {
+            "type": "shell",
+            "key": "   Shell"
+        },
+        {
+            "type": "display",
+            "key": "   Display",
+            "compactType": "name"
+        },
+        {
+            "type": "de",
+            "key": "   DE / WM"
+        },
+        {
+            "type": "wmtheme",
+            "key": "   Theme"
+        },
+        {
+            "type": "icons",
+            "key": "   Icons"
+        },
+        {
+            "type": "font",
+            "key": "   Font"
+        },
+        {
+            "type": "cpu",
+            "key": "   CPU",
+            "showPeCoreCount": true
+        },
+        {
+            "type": "gpu",
+            "key": "   GPU"
+        },
+        {
+            "type": "memory",
+            "key": "   RAM"
+        },
+        {
+            "type": "swap",
+            "key": "  󰓡 Swap",
+            "showPercentage": true
+        },
+        {
+            "type": "disk",
+            "key": "  󰋊 Disk",
+            "folders": "/"
+        },
+        {
+            "type": "localip",
+            "key": "  󰖩 LAN",
+            "compact": true,
+            "ipv6": false
+        },
+        {
+            "type": "battery",
+            "key": "   Bat"
+        },
+        {
+            "type": "break",
+            "height": 1
+        },
+        {
+            "type": "colors",
+            "paddingLeft": 2,
+            "symbol": "circle"
+        }
+    ]
+}
